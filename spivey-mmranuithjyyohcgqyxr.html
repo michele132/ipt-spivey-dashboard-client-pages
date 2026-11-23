@@ -140,6 +140,9 @@ body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-fami
 section[id] { scroll-margin-top: 64px; }
 
 /* past notes */
+.sig-hist .sig-month { margin-top: 6px; border: 1px solid var(--color-border-line); border-radius: 6px; padding: 4px 8px; background: var(--color-bg); }
+.sig-hist .sig-month > summary { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.sig-hist .sig-month .sig-hist-entry:first-of-type { margin-top: 4px; }
 .sig-hist { font-size: var(--cds-font-size-caption); border-top: 1px dashed var(--color-border-line); padding-top: 6px; }
 .sig-hist summary { cursor: pointer; color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
 .sig-hist-entry { margin-top: 8px; }
@@ -164,12 +167,12 @@ ul li.iplib-note { grid-column: 1 / -1; background: none; border: 0; padding: 0 
     <div class="sig-logo"><img src="data:image/webp;base64,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" alt="Spivey Insurance Group logo"></div>
     <div class="sig-headtext">
       <h1 class="sig-title">Spivey Insurance Group</h1>
-      <p class="sig-sub">Client dashboard · Impact Performance Team</p>
+      <p class="sig-sub">Client Dashboard</p>
     </div>
   </header>
 
   <nav class="sig-nav" aria-label="Sections"><span class="sig-navlogo" aria-hidden="true"></span>
-    <a href="#sales" data-nav-sec="sales">Sales</a><a href="#sales-call" data-nav-sec="sales_call">Sales Call</a><a href="#leadership" data-nav-sec="leadership">Leadership</a><a href="#service" data-nav-sec="service">Service &amp; Ops</a><a href="#recruiting">Recruiting</a><a href="#library">Client Library</a><a href="#tasks">Open tasks</a>
+    <a href="#sales" data-nav-sec="sales">Sales</a><a href="#sales-call" data-nav-sec="sales_call">Sales Call</a><a href="#leadership" data-nav-sec="leadership">Leadership</a><a href="#service" data-nav-sec="service">Service &amp; Ops</a><a href="#recruiting">Recruiting</a><a href="#library">Client Library</a><a href="#tasks">Open Tasks</a>
   </nav>
 
   <section class="sig-sec" id="sales" data-hide-empty="sales">
@@ -287,7 +290,7 @@ ul li.iplib-note { grid-column: 1 / -1; background: none; border: 0; padding: 0 
 
   <section class="sig-sec" id="tasks">
     <div class="sig-sec-head">
-      <div><h2>Open tasks</h2><p>Colby Spivey</p></div>
+      <div><h2>Open Tasks</h2><p>Colby Spivey</p></div>
     </div>
     <div class="sig-tablewrap">
       <table class="sig-table" data-source="tasks_all" data-row-key="key">
@@ -508,14 +511,17 @@ window.sigPast = function (raw) {
   h = h.filter((e) => e && (e.working_on || e.notes)).sort((a, b) => String(b.as_of || '').localeCompare(String(a.as_of || '')));
   if (!h.length) return null;
   const det = sigEl('details', 'sig-hist');
-  det.append(sigEl('summary', null, 'Past notes (' + h.length + ')'));
+  det.append(sigEl('summary', null, 'Past Notes'));
+  let curM = null, curBox = null;
   h.forEach((e) => {
     const blk = sigEl('div', 'sig-hist-entry');
     blk.append(sigEl('div', 'sig-hist-date', (e.meeting ? e.meeting + ' · ' : '') + (window.sigFmt(e.as_of) || '')));
     const ul = sigEl('ul', 'sig-bullets');
     String(e.working_on || e.notes || '').split(/\n|(?<=[.!?])\s+(?=[A-Z0-9$(“"])/).map((s) => s.replace(/^[•\-\s]+/, '').trim()).filter(Boolean).forEach((s) => ul.append(sigEl('li', null, s)));
     blk.append(ul);
-    det.append(blk);
+    const ym = String(e.as_of || '').slice(0, 7);
+    if (ym !== curM || !curBox) { curM = ym; curBox = sigEl('details', 'sig-month'); curBox.append(sigEl('summary', null, /^\d{4}-\d{2}$/.test(ym) ? d3.utcFormat('%B %Y')(new Date(ym + '-01T00:00:00Z')) : 'Earlier')); det.append(curBox); }
+    curBox.append(blk);
   });
   return det;
 };
@@ -548,7 +554,7 @@ dash.draw('cards', (el) => {
     c.append(top);
 
     const meets = sigEl('div', 'sig-meets');
-    [['last', 'Last IPT meeting'], ['next', 'Next IPT meeting']].forEach(([k, label]) => {
+    [['last', 'Last IPT Meeting'], ['next', 'Next IPT Meeting']].forEach(([k, label]) => {
       const m = sigEl('div', 'sig-meet');
       m.append(sigEl('div', 'lbl', label));
       if (x[k + '_date']) {
